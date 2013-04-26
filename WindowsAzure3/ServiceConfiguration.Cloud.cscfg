@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WindowsAzure3" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="WCFServiceWebRole1">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=mcrperformancewestusdiag;AccountKey=B3ML/HJMhRM02cREwq3HCZixw7DPiljwtwgk0pFH+GijQRUs4yrcRw7g9M28mbcgEqjKnNpkdB4FQkmst+fG8A==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBuwaGQPS5qpTEiu8WuQbYEwDQYJKoZIhvcNAQEBBQAEggEAHH/jr5/nbQgJuCg1bbMn9shmGY/Ipeh9qFa3QIv6ri+IkU1t6ynPbf6v/1dqf3H51bKPcpTFW0ut+qjToMfzsHbCULnHfqw4meDN6HY24v10xQ8y1dxquD6T5ONo6+1FcNvxfG0SNUTAtu3VahUjCxPrTY5bFIMiaZH2UAwQgxCv+WirBpNLGyLKN1gRTxHVmMK+xzMRlNetfwUsn2cgkqwUwjsDXaTkeQghqUPiUCJLpRtuVTdrPCBNGsdc2fSgMJxdz9RAb5Xy/f6UPuEVfS6NX+3Dw948h96tW9NVfXL+sp3FabTrRAeDRfx6uPv753CnPewSRXShvOt5GPpwbzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPf6EMXatAsjgBCmclmtD+hIh4v6Cu314l2x" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-06T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDAF64FB98CAC1C89C8D98D027EF7D53020173A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="CacheWorkerRole2">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ccperformancewestus;AccountKey=1MDrRVLW4Fag/tHdI3ITG5Mfs0ESGXZMMJWpNpX+RzrA7OC6nLLOuKLlulW/CuiBVPV20/3CshoGCrRH0TDrog==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBuwaGQPS5qpTEiu8WuQbYEwDQYJKoZIhvcNAQEBBQAEggEAHH/jr5/nbQgJuCg1bbMn9shmGY/Ipeh9qFa3QIv6ri+IkU1t6ynPbf6v/1dqf3H51bKPcpTFW0ut+qjToMfzsHbCULnHfqw4meDN6HY24v10xQ8y1dxquD6T5ONo6+1FcNvxfG0SNUTAtu3VahUjCxPrTY5bFIMiaZH2UAwQgxCv+WirBpNLGyLKN1gRTxHVmMK+xzMRlNetfwUsn2cgkqwUwjsDXaTkeQghqUPiUCJLpRtuVTdrPCBNGsdc2fSgMJxdz9RAb5Xy/f6UPuEVfS6NX+3Dw948h96tW9NVfXL+sp3FabTrRAeDRfx6uPv753CnPewSRXShvOt5GPpwbzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPf6EMXatAsjgBCmclmtD+hIh4v6Cu314l2x" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-06T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ccperformancewestus;AccountKey=1MDrRVLW4Fag/tHdI3ITG5Mfs0ESGXZMMJWpNpX+RzrA7OC6nLLOuKLlulW/CuiBVPV20/3CshoGCrRH0TDrog==" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDAF64FB98CAC1C89C8D98D027EF7D53020173A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

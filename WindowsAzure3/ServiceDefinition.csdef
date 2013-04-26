@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="WindowsAzure3" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2012-10.1.8">
+  <WebRole name="WCFServiceWebRole1" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="WebEndpoint" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="WebEndpoint" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="WCFServiceWebRole1.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Certificates>
+    </Certificates>
+  </WebRole>
+  <WorkerRole name="CacheWorkerRole2" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="Caching" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+  </WorkerRole>
+</ServiceDefinition>
