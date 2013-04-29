@@ -31,4 +31,17 @@
       <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDAF64FB98CAC1C89C8D98D027EF7D53020173A0" thumbprintAlgorithm="sha1" />
     </Certificates>
   </Role>
+  <Role name="MvcWebRole1">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Remote" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBuwaGQPS5qpTEiu8WuQbYEwDQYJKoZIhvcNAQEBBQAEggEAHH/jr5/nbQgJuCg1bbMn9shmGY/Ipeh9qFa3QIv6ri+IkU1t6ynPbf6v/1dqf3H51bKPcpTFW0ut+qjToMfzsHbCULnHfqw4meDN6HY24v10xQ8y1dxquD6T5ONo6+1FcNvxfG0SNUTAtu3VahUjCxPrTY5bFIMiaZH2UAwQgxCv+WirBpNLGyLKN1gRTxHVmMK+xzMRlNetfwUsn2cgkqwUwjsDXaTkeQghqUPiUCJLpRtuVTdrPCBNGsdc2fSgMJxdz9RAb5Xy/f6UPuEVfS6NX+3Dw948h96tW9NVfXL+sp3FabTrRAeDRfx6uPv753CnPewSRXShvOt5GPpwbzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPf6EMXatAsjgBCmclmtD+hIh4v6Cu314l2x" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-06T23:59:59.0000000+01:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EDAF64FB98CAC1C89C8D98D027EF7D53020173A0" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
 </ServiceConfiguration>

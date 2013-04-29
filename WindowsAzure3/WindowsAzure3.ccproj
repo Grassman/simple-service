@@ -45,6 +45,14 @@
       <RoleName>CacheWorkerRole2</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
+    <ProjectReference Include="..\MvcWebRole1\MvcWebRole1.csproj">
+      <Name>MvcWebRole1</Name>
+      <Project>{5e4e377c-e6a8-4ff0-ae69-5b3cb7e5863f}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>MvcWebRole1</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
     <ProjectReference Include="..\WCFServiceWebRole1\WCFServiceWebRole1.csproj">
       <Name>WCFServiceWebRole1</Name>
       <Project>{38cd1bdf-5653-40e3-95b1-fcd41d8a9ddd}</Project>
